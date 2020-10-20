@@ -1,0 +1,9 @@
+D:\Work\Projects\Candle\Site\Candle\TCC.Candle.Test\bin\Debug\netcoreapp2.2\TCC.Candle.Test.deps.json
+D:\Work\Projects\Candle\Site\Candle\TCC.Candle.Test\bin\Debug\netcoreapp2.2\TCC.Candle.Test.dll
+D:\Work\Projects\Candle\Site\Candle\TCC.Candle.Test\bin\Debug\netcoreapp2.2\TCC.Candle.Test.pdb
+D:\Work\Projects\Candle\Site\Candle\TCC.Candle.Test\obj\Debug\netcoreapp2.2\TCC.Candle.Test.csprojAssemblyReference.cache
+D:\Work\Projects\Candle\Site\Candle\TCC.Candle.Test\obj\Debug\netcoreapp2.2\TCC.Candle.Test.csproj.CoreCompileInputs.cache
+D:\Work\Projects\Candle\Site\Candle\TCC.Candle.Test\obj\Debug\netcoreapp2.2\TCC.Candle.Test.AssemblyInfoInputs.cache
+D:\Work\Projects\Candle\Site\Candle\TCC.Candle.Test\obj\Debug\netcoreapp2.2\TCC.Candle.Test.AssemblyInfo.cs
+D:\Work\Projects\Candle\Site\Candle\TCC.Candle.Test\obj\Debug\netcoreapp2.2\TCC.Candle.Test.dll
+D:\Work\Projects\Candle\Site\Candle\TCC.Candle.Test\obj\Debug\netcoreapp2.2\TCC.Candle.Test.pdb
