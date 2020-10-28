@@ -26,18 +26,19 @@ var __init_2 = require("./pages/__init");
 __init_1.InitShared();
 __init_2.InitPages();
 
-},{"./pages/__init":3,"./shared/__init":5}],3:[function(require,module,exports){
+},{"./pages/__init":3,"./shared/__init":6}],3:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.InitPages = void 0;
 var index_1 = require("./index");
+var shelf_1 = require("./shelf");
 function InitPages() {
-    // Attach Index
     new index_1.Index();
+    new shelf_1.Shelf();
 }
 exports.InitPages = InitPages;
 
-},{"./index":4}],4:[function(require,module,exports){
+},{"./index":4,"./shelf":5}],4:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Index = void 0;
@@ -54,42 +55,50 @@ exports.Index = Index;
 },{"../helpers/animate":1}],5:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Shelf = void 0;
+var Shelf = /** @class */ (function () {
+    function Shelf() {
+        this.OwlCarouselPlugin();
+    }
+    // Configuring Shelf Carousel
+    Shelf.prototype.OwlCarouselPlugin = function () {
+        $(".owl-carousel").owlCarousel({
+            loop: false,
+            margin: 10,
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: true,
+                },
+                600: {
+                    items: 3,
+                    nav: false,
+                },
+                1000: {
+                    items: 5,
+                    nav: true,
+                    loop: false,
+                },
+            },
+        });
+    };
+    return Shelf;
+}());
+exports.Shelf = Shelf;
+
+},{}],6:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.InitShared = void 0;
-var plugins_1 = require("./plugins");
 var sidebar_1 = require("./sidebar");
 function InitShared() {
-    // Activate Vendor Plugins
-    new plugins_1.ActivateVendorPlugins();
     // Attach Sidebar
     new sidebar_1.Sidebar();
 }
 exports.InitShared = InitShared;
 
-},{"./plugins":6,"./sidebar":7}],6:[function(require,module,exports){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ActivateVendorPlugins = void 0;
-var ActivateVendorPlugins = /** @class */ (function () {
-    function ActivateVendorPlugins() {
-        this.JQueryPlugins();
-        this.BootstrapPlugins();
-        this.FontAwesomePlugins();
-    }
-    ActivateVendorPlugins.prototype.BootstrapPlugins = function () {
-        // Enable Boostrap Tooltop
-        $(function () {
-            $('[data-toggle="tooltip"]').tooltip();
-        });
-    };
-    ActivateVendorPlugins.prototype.JQueryPlugins = function () { };
-    ActivateVendorPlugins.prototype.FontAwesomePlugins = function () {
-        // Activate Psuedo icons
-    };
-    return ActivateVendorPlugins;
-}());
-exports.ActivateVendorPlugins = ActivateVendorPlugins;
-
-},{}],7:[function(require,module,exports){
+},{"./sidebar":7}],7:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Sidebar = void 0;

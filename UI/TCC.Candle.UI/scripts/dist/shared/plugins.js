@@ -6,6 +6,7 @@ var ActivateVendorPlugins = /** @class */ (function () {
         this.JQueryPlugins();
         this.BootstrapPlugins();
         this.FontAwesomePlugins();
+        this.OwlCarouselPlugin();
     }
     ActivateVendorPlugins.prototype.BootstrapPlugins = function () {
         // Enable Boostrap Tooltop
@@ -16,6 +17,11 @@ var ActivateVendorPlugins = /** @class */ (function () {
     ActivateVendorPlugins.prototype.JQueryPlugins = function () { };
     ActivateVendorPlugins.prototype.FontAwesomePlugins = function () {
         // Activate Psuedo icons
+    };
+    ActivateVendorPlugins.prototype.OwlCarouselPlugin = function () {
+        $(document).ready(function () {
+            $('.owl-carousel').owlCarousel();
+        });
     };
     return ActivateVendorPlugins;
 }());
