@@ -26,28 +26,33 @@ var __init_2 = require("./pages/__init");
 __init_1.InitShared();
 __init_2.InitPages();
 
-},{"./pages/__init":3,"./shared/__init":6}],3:[function(require,module,exports){
+},{"./pages/__init":3,"./shared/__init":7}],3:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.InitPages = void 0;
 var index_1 = require("./index");
+var library_1 = require("./library");
 var shelf_1 = require("./shelf");
 function InitPages() {
     new index_1.Index();
+    new library_1.Library();
     new shelf_1.Shelf();
 }
 exports.InitPages = InitPages;
 
-},{"./index":4,"./shelf":5}],4:[function(require,module,exports){
+},{"./index":4,"./library":5,"./shelf":6}],4:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Index = void 0;
 var animate_1 = require("../helpers/animate");
 var Index = /** @class */ (function () {
     function Index() {
+        this.AnimateLibraryItemOnHover();
+    }
+    Index.prototype.AnimateLibraryItemOnHover = function () {
         // animate library item list on hover
         animate_1.animateOnHover($(".lib-card"), "animate__pulse");
-    }
+    };
     return Index;
 }());
 exports.Index = Index;
@@ -55,13 +60,13 @@ exports.Index = Index;
 },{"../helpers/animate":1}],5:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Shelf = void 0;
-var Shelf = /** @class */ (function () {
-    function Shelf() {
+exports.Library = void 0;
+var Library = /** @class */ (function () {
+    function Library() {
         this.OwlCarouselPlugin();
     }
     // Configuring Shelf Carousel
-    Shelf.prototype.OwlCarouselPlugin = function () {
+    Library.prototype.OwlCarouselPlugin = function () {
         $(".owl-carousel").owlCarousel({
             loop: false,
             margin: 10,
@@ -83,11 +88,27 @@ var Shelf = /** @class */ (function () {
             },
         });
     };
+    return Library;
+}());
+exports.Library = Library;
+
+},{}],6:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Shelf = void 0;
+var animate_1 = require("../helpers/animate");
+var Shelf = /** @class */ (function () {
+    function Shelf() {
+        this.AnimateBookCardOnHover();
+    }
+    Shelf.prototype.AnimateBookCardOnHover = function () {
+        animate_1.animateOnHover($('.book-card'), "animate__headShake");
+    };
     return Shelf;
 }());
 exports.Shelf = Shelf;
 
-},{}],6:[function(require,module,exports){
+},{"../helpers/animate":1}],7:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.InitShared = void 0;
@@ -98,7 +119,7 @@ function InitShared() {
 }
 exports.InitShared = InitShared;
 
-},{"./sidebar":7}],7:[function(require,module,exports){
+},{"./sidebar":8}],8:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Sidebar = void 0;

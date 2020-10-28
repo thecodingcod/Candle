@@ -1,0 +1,72 @@
+.book-card {
+    border-radius: 0;
+    margin-bottom: 2rem;
+}
+
+.book-card>.card-header:after {
+    content: "";
+    background-color: #701f07;
+    height: 0.3rem;
+    width: 100%;
+    display: block;
+}
+
+.book-card>.card-header {
+    background-color: #fff;
+    border: 0;
+}
+
+.book-card>.card-header a {
+    text-decoration: none;
+    color: #333;
+}
+
+.book-card>.card-header a:hover {
+    color: #965223;
+}
+
+.book-card>.card-body {
+    padding: 0;
+}
+
+.book-card>.card-body>img {
+    width: 100%;
+    height: auto;
+}
+
+.book-card>.card-footer {
+    background-color: #fff;
+    border: 0;
+}
+
+.book-card>.card-footer>.tag_list {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.book-card>.card-footer>.tag_list li {
+    background-color: #e9d08e;
+    border-radius: 1rem;
+    padding: 0.1rem 0.3rem;
+    margin: 0.1rem;
+}
+
+.book-card>.card-footer>.tag_list li:hover {
+    -webkit-box-shadow: 7px 9px 8px -9px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 7px 9px 8px -9px rgba(0, 0, 0, 0.75);
+    box-shadow: 7px 9px 8px -9px rgba(0, 0, 0, 0.75);
+}
+
+.book-card>.card-footer>.tag_list li a {
+    text-decoration: none;
+    color: #701f07;
+}
+
+.book-card>.card-footer>.tag_list li a:before {
+    content: "#";
+}

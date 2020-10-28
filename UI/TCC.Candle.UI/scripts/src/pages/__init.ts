@@ -1,8 +1,9 @@
 import { Index } from "./index";
-import { Shelf } from "./library";
+import { Library } from "./library";
+import { Shelf } from "./shelf";
 
 export function InitPages() {
   new Index();
+  new Library();
   new Shelf();
-
 }

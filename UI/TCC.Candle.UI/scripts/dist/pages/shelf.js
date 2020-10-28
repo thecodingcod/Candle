@@ -1,32 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Shelf = void 0;
+var animate_1 = require("../helpers/animate");
 var Shelf = /** @class */ (function () {
     function Shelf() {
-        this.OwlCarouselPlugin();
+        this.AnimateBookCardOnHover();
     }
-    // Configuring Shelf Carousel
-    Shelf.prototype.OwlCarouselPlugin = function () {
-        $(".owl-carousel").owlCarousel({
-            loop: false,
-            margin: 10,
-            responsiveClass: true,
-            responsive: {
-                0: {
-                    items: 1,
-                    nav: true,
-                },
-                600: {
-                    items: 3,
-                    nav: false,
-                },
-                1000: {
-                    items: 5,
-                    nav: true,
-                    loop: false,
-                },
-            },
-        });
+    Shelf.prototype.AnimateBookCardOnHover = function () {
+        animate_1.animateOnHover($('.book-card'), "animate__headShake");
     };
     return Shelf;
 }());

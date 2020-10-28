@@ -1,6 +1,8 @@
 // Avoid JqueryTypingMistakes: Not the best practice though!
+declare var $:any;
 
-export class Shelf {
+
+export class Library {
   constructor() {
     this.OwlCarouselPlugin();
   }
