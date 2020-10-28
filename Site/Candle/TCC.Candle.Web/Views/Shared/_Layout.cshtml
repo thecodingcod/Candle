@@ -1,0 +1,46 @@
+﻿
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <partial name="./Layout/_styles" />
+
+    <!-- Enable Fontawesome Psuedo elements -->
+    <script>
+        window.FontAwesomeConfig = {
+            searchPseudoElements: true
+        }
+    </script>
+
+    @RenderSection("styles", false)
+    <title>Candle - @ViewBag.Title</title>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <partial name="./Layout/_header" />
+    <!-- End of Header Partial -->
+    <!--Side Bar-->
+    <partial name="./Layout/_Sidebar" />
+
+    <!-- Content -->
+    <section id="content">
+        @RenderBody();
+    </section>
+    <!-- End of Content -->
+    <!-- Scripts -->
+    @await Html.PartialAsync("./Layout/_scripts")
+
+
+
+
+
+    @RenderSection("scripts", false)
+    <!-- End of scripts-->
+</body>
+
+</html>

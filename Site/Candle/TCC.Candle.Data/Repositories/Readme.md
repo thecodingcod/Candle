@@ -1,3 +1,4 @@
 ﻿# What is Repository Folder?
 
-Repository Folder Is mainly used to Provide Implementation for Abstract Interfaces and Abstract Classes that Resides in the Abstract Folder.
+Abstract Dir: Contains the Definitions for Repositories.
+Concerete Dir: Contains the implementation for Abstract Repos in Abstract.

@@ -1,0 +1,9 @@
+.book__ImagePreview{
+    width:100%;
+
+}
+
+.book__ImagePreview img{
+    width:100%;
+    height:auto;
+}

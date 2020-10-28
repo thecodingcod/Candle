@@ -37,12 +37,23 @@ namespace TCC.Candle.Web
                 app.UseDeveloperExceptionPage();
             }
 
-
             app.UseMvc(routes =>
             {
                 // Default Route
                 routes.MapRoute(name: "Default", template: "{controller=Home}/{action=Index}/{Id?}");
             });
+
+            // Serve Static Files
+            app.UseStaticFiles();
+
+
+            // Assuring that static files are working properly
+            //app.UseDirectoryBrowser();
+
+
+
+
+
 
 
 

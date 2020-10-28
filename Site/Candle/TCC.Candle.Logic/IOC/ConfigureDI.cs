@@ -1,4 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using TCC.Candle.Logic.Services.Abstract;
+using TCC.Candle.Logic.Services.Concrete;
 
 namespace TCC.Candle.Logic.IOC
 {
@@ -6,7 +8,7 @@ namespace TCC.Candle.Logic.IOC
     {
         public static IServiceCollection AddLogicLayerServices(this IServiceCollection services)
         {
-            services.AddScoped<IBookService, BookService>();
+            services.AddScoped<ILibraryService, LibraryService>();
             return services;
         }
     }

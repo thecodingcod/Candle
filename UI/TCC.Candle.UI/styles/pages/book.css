@@ -1,0 +1,67 @@
+/* Book Custom Css
+*=======================================================>*/
+.book {
+  width: 100%;
+}
+
+.book__info__ISBN13 {
+}
+
+.book__cover {
+  width: 100%;
+  height: auto;
+}
+
+.book__metadata {
+  line-height: 0rem;
+}
+.book__metadata p {
+  font-size: 0.7rem;
+}
+
+.book__description {
+}
+
+.book__rate hr{
+    text-align: left;
+    max-width: 25%;
+    margin:1rem 0;
+}
+
+.book__volume__books{
+    list-style-type: none;
+}
+
+.li-connect{
+    margin-left:11px;
+    border-left: 2px solid #333;
+    height:0.8rem;
+}
+
+.li-data{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.li-data a{}
+
+.li-data__circle{
+    display: inline-block;
+    min-width: 1.5rem;
+    max-width: 1.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 1px solid #333;
+    border-radius: 50%;
+    margin-right:1rem;
+}
+
+
+.book__review{
+    border-radius: 0;
+}
+
+/* Book: Small Screens
+=========================================>*/
+@media only screen and (min-width: 600px) {
+}

@@ -1,0 +1,82 @@
+/* Lib Tiles
+*======================================================*/
+.lib-card {
+    width: 100%;
+    height: 90%;
+    border-radius: 0;
+    cursor: pointer;
+  }
+  .lib-card img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .lib-card > .card-body {
+    display: block;
+    padding: 0;
+  }
+
+    .lib-card > .card-body .controls a{
+        text-decoration:none;
+    }
+
+
+
+    .lib-card > .card-body > .overlay,
+    .lib-card > .card-body > .overlay-content {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        padding: 1rem;
+    }
+  .lib-card > .card-body > .overlay {
+    display: block;
+    background-color: #000;
+    z-index: 2;
+    opacity: 0.72;
+  }
+
+  .lib-card > .card-body > .overlay-content {
+    z-index: 3;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .lib-card:hover {
+    transform: translateX(-5px);
+    transition: all 0.1s linear;
+  }
+
+  .lib-card > .card-body > .controls{
+      position: absolute;
+      top:0;
+      right:0;
+      z-index: 4;
+      display: inline-flex;
+      justify-content: flex-end;
+      width: 100%;
+  }
+
+
+  /* Lib Aside
+*======================================================*/
+/*.lib__recent{
+
+}*/
+
+.lib__recent__list{
+    list-style-type: none;
+    padding:0;
+}
+.lib__recent__list li{
+    border-bottom: 1px solid #000;
+}
+
+/*.lib__recent__list li:hover{
+
+}*/

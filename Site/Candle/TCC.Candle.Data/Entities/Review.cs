@@ -1,4 +1,5 @@
 ﻿using System;
+using TCC.Candle.Data.Enums;
 
 namespace TCC.Candle.Data.Entities
 {

@@ -10,3 +10,15 @@ D:\Work\Projects\Candle\Site\Candle\TCC.Candle.Logic\obj\Debug\netstandard2.0\TC
 D:\Work\Projects\Candle\Site\Candle\TCC.Candle.Logic\bin\Debug\netstandard2.0\TCC.Candle.Data.dll
 D:\Work\Projects\Candle\Site\Candle\TCC.Candle.Logic\bin\Debug\netstandard2.0\TCC.Candle.Data.pdb
 D:\Work\Projects\Candle\Site\Candle\TCC.Candle.Logic\obj\Debug\netstandard2.0\TCC.Candle.Logic.csproj.CopyComplete
+C:\Users\moham\Desktop\Candle\Site\Candle\TCC.Candle.Logic\bin\Debug\netstandard2.0\TCC.Candle.Logic.deps.json
+C:\Users\moham\Desktop\Candle\Site\Candle\TCC.Candle.Logic\bin\Debug\netstandard2.0\TCC.Candle.Logic.dll
+C:\Users\moham\Desktop\Candle\Site\Candle\TCC.Candle.Logic\bin\Debug\netstandard2.0\TCC.Candle.Logic.pdb
+C:\Users\moham\Desktop\Candle\Site\Candle\TCC.Candle.Logic\bin\Debug\netstandard2.0\TCC.Candle.Data.dll
+C:\Users\moham\Desktop\Candle\Site\Candle\TCC.Candle.Logic\bin\Debug\netstandard2.0\TCC.Candle.Data.pdb
+C:\Users\moham\Desktop\Candle\Site\Candle\TCC.Candle.Logic\obj\Debug\netstandard2.0\TCC.Candle.Logic.csprojAssemblyReference.cache
+C:\Users\moham\Desktop\Candle\Site\Candle\TCC.Candle.Logic\obj\Debug\netstandard2.0\TCC.Candle.Logic.csproj.CoreCompileInputs.cache
+C:\Users\moham\Desktop\Candle\Site\Candle\TCC.Candle.Logic\obj\Debug\netstandard2.0\TCC.Candle.Logic.AssemblyInfoInputs.cache
+C:\Users\moham\Desktop\Candle\Site\Candle\TCC.Candle.Logic\obj\Debug\netstandard2.0\TCC.Candle.Logic.AssemblyInfo.cs
+C:\Users\moham\Desktop\Candle\Site\Candle\TCC.Candle.Logic\obj\Debug\netstandard2.0\TCC.Candle.Logic.csproj.CopyComplete
+C:\Users\moham\Desktop\Candle\Site\Candle\TCC.Candle.Logic\obj\Debug\netstandard2.0\TCC.Candle.Logic.dll
+C:\Users\moham\Desktop\Candle\Site\Candle\TCC.Candle.Logic\obj\Debug\netstandard2.0\TCC.Candle.Logic.pdb

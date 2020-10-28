@@ -1,0 +1,114 @@
+﻿@model TCC.Candle.Web.ViewModels.Home.IndexViewModel
+@{
+    ViewBag.Title = "Home page";
+}
+
+
+<section class="container">
+    <!-- Controls -->
+    <div class="row">
+        <div class="col-12">
+            <div class="d-flex justify-content-between align-items-center flex-wrap-reverse page__controls">
+                <h1 class="text-dark">
+                    All Libraries
+                    <span class="badge badge-dark">@Model.LibrariesCount</span>
+                </h1>
+                <div class="page__controls--buttons">
+
+                    <a class="ml-4 text-warning" href="#" title="Edit Libraries">
+                        <i class="fas fa-2x fa-pen-square"></i>
+                    </a>
+
+
+
+
+                    <a asp-action="create" class="ml-4 text-dark" title="AddLibrary new library">
+                        <i class="fas fa-2x fa-plus-circle"></i>
+                    </a>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </div>
+    <!-- End of Controls -->
+
+
+    <div id="main__content" class="row">
+        <aside class="col-12  col-md-3">
+            <h5 class="lib__recent">Recent Libraries</h5>
+            <ul class="lib__recent__list">
+                <li>
+                    <a href="#">
+                        Library 1
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+
+
+
+
+        <section class="col-12  col-md-9 ">
+            <div class="row">
+                @foreach (var lib in Model.Libraries)
+                {
+                    <!-- Library Card -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="card lib-card">
+                            <div class="card-body">
+                                <div class="controls p-1">
+                                    <div class="d-flex justify-content-between align-items-center w-100">
+                                        <div class="">
+
+                                            <span class="badge badge-pill bg-transparent text-light" title="Shelves">
+                                                <i class="fab fa-2x fa-buffer"></i> &nbsp;
+                                                @lib.ShelvesCount
+                                            </span>
+                                            <span class="badge badge-pill  bg-transparent text-light" title="Books">
+                                                <i class="fas fa-2x fa-book-medical"></i> &nbsp;
+                                                @lib.ShelvesCount
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <a asp-action="Edit" asp-route-Id="@lib.Id" class="mx-2  my-1 text-warning">
+                                                <i class="fas fa-2x fa-pen-square"></i>
+                                            </a>
+                                            <a asp-action="Delete" asp-route-Id="@lib.Id" class="mx-2 my-1 text-danger">
+                                                <i class="far fa-2x fa-trash-alt"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <img src="~/static/images/library.jpg">
+                                <div class="overlay">
+
+                                </div>
+                                <div class="overlay-content">
+                                    <h2>@lib.Name</h2>
+                                    <small class="text-info">last modified on: @lib.LastModified.ToShortDateString() </small>
+                                </div>
+
+
+
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Of Library Card -->
+                }
+
+            </div>
+        </section>
+    </div>
+</section>
+
+
+
+@section Styles{
+    <link rel="stylesheet" href="~/static/styles/pages/index.css">
+}

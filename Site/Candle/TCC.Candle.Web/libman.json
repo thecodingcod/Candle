@@ -1,0 +1,58 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+
+    {
+      "provider": "cdnjs",
+      "library": "twitter-bootstrap@4.5.3",
+      "destination": "wwwroot/static/vendors/twitter-bootstrap/",
+      "files": [
+        "css/bootstrap.min.css",
+        "js/bootstrap.bundle.min.js",
+        "js/bootstrap.bundle.min.js.map",
+        "css/bootstrap.min.css.map"
+      ]
+    },
+    {
+      "provider": "cdnjs",
+      "library": "jquery@3.5.1",
+      "destination": "wwwroot/static/vendors/jquery/",
+      "files": [
+        "jquery.min.js",
+        "jquery.min.map"
+      ]
+    },
+    {
+      "provider": "cdnjs",
+      "library": "font-awesome@5.15.1",
+      "destination": "wwwroot/static/vendors/font-awesome/",
+      "files": [
+        "css/all.min.css",
+        "js/all.min.js"
+      ]
+    },
+    {
+      "provider": "cdnjs",
+      "library": "animate.css@4.1.1",
+      "destination": "wwwroot/static/vendors/animate.css/animate.css/",
+      "files": [
+        "animate.min.css"
+      ]
+    },
+    {
+      "provider": "cdnjs",
+      "library": "jquery-validation-unobtrusive@3.2.11",
+      "destination": "wwwroot/static/vendors/jquery-validation-unobtrusive/"
+    }
+  ,
+{
+  "provider": "cdnjs",
+  "library": "jquery-validate@1.19.2",
+  "destination": "wwwroot/static/vendors/jquery-validate/",
+  "files": [
+    "jquery.validate.min.js"
+  ]
+}
+]
+}

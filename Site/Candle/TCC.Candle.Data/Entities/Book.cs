@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using TCC.Candle.Data.Enums;
 
 namespace TCC.Candle.Data.Entities
 {

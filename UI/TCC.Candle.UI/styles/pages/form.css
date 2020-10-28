@@ -1,0 +1,31 @@
+﻿.ImagePreview {
+    width: 100%;
+}
+
+    .ImagePreview img {
+        width: 100%;
+        height: auto;
+    }
+
+
+
+
+.field-validation-error {
+    padding: 1em 0rem;
+    color: #EB3941;
+}
+
+
+    .field-validation-error:before {
+        content: "\f057";
+        padding-right: 10px;
+        font-weight: 400;
+        font-family: "Font Awesome 5 Free";
+        display: none;
+    }
+
+
+
+.field-validation-error > svg {
+    margin-right: 5px;
+}

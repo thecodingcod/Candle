@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using TCC.Candle.Data.Entities;
+using TCC.Candle.Data.Helpers;
 using TCC.Candle.Data.Mapping;
-
 namespace TCC.Candle.Data
 {
     public class CandleContext : DbContext
@@ -9,10 +9,6 @@ namespace TCC.Candle.Data
         public CandleContext(DbContextOptions options) : base(options)
         {
 
-        }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            base.OnConfiguring(optionsBuilder);
         }
 
 
@@ -27,6 +23,11 @@ namespace TCC.Candle.Data
             modelBuilder.ApplyConfiguration(new AuthorETC());
             modelBuilder.ApplyConfiguration(new BookAuthorETC());
             modelBuilder.ApplyConfiguration(new TaggedBookETC());
+
+
+            // Global QueryFilter
+            // Enabling for Soft Deleted Items
+            modelBuilder.ApplyGlobalFilters<BaseEntity>(b => !b.IsDeleted);
         }
 
         // DBSets

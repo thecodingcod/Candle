@@ -1,0 +1,37 @@
+{
+  "name": "tcc.candle.ui",
+  "version": "1.0.0",
+  "description": "Library Tracker and Reading Scheduler",
+  "main": "index.js",
+  "scripts": {
+    "live": "live-server",
+    "ts": "tsc",
+    "bundle": "browserify ./scripts/dist/main.js -o ./scripts/dist/bundle.js",
+    "compile": "npm run ts & npm run bundle"
+  },
+  "keywords": [
+    "books",
+    "book",
+    "libraries",
+    "library",
+    "shelves",
+    "shelf",
+    "volume",
+    "volumes"
+  ],
+  "author": "tcc.mobenali",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/bootstrap": "^5.0.0",
+    "@types/jquery": "^3.5.3",
+    "concurrently": "^5.3.0",
+    "live-server": "^1.2.1"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
+    "animate.css": "^4.1.1",
+    "bootstrap": "^4.5.3",
+    "jquery": "^3.5.1",
+    "owl.carousel": "^2.3.4"
+  }
+}

@@ -1,0 +1,319 @@
+/* Fonts
+*==================================================>*/
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700;900&display=swap");
+/* Overrides
+*==================================================>*/
+
+* {
+    font-size: 16px;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+#navbarBrand {
+    font-family: "Libre Baskerville", serif !important;
+}
+
+.hide {
+    display: none;
+}
+
+
+/*.page__controls {
+}
+
+
+.page__controls--buttons {
+    .
+}*/
+
+.page__controls--buttons a {
+    text-decoration: none;
+}
+
+
+#content {
+    margin-top: 10rem;
+}
+
+
+/** medium Screens */
+@media only screen and (min-width: 768px) {
+    #content {
+        margin-top: 6rem;
+    }
+}
+
+
+
+
+/* Preloader
+*==================================================>*/
+.preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    transition: opacity 0.3s linear;
+    z-index: 9999;
+}
+
+/* Navbar
+*==================================================>*/
+.navbar-nav .dropdown-menu {
+    left: -50px;
+}
+
+/* Search Bar */
+.navbar__search {
+    width: 100%;
+    top: 1rem;
+}
+
+    .navbar__search > .search__input {
+        width: calc(100% - 50px);
+        border-radius: 0;
+        border: none;
+    }
+
+    .navbar__search .search__button {
+        border-radius: 0;
+        border: none;
+    }
+
+/** medium Screens */
+@media only screen and (min-width: 768px) {
+    body:before {
+        content: "medium";
+    }
+
+    /* Search Bar */
+    .navbar__search {
+        width: 50%;
+    }
+}
+
+/** Large Screens */
+@media only screen and (min-width: 992px) {
+    body:before {
+        content: "large";
+    }
+
+    /* Search Bar */
+    .navbar__search {
+        width: 35%;
+    }
+}
+
+/* Sidebar
+*==================================================>*/
+
+.sidebar {
+    position: fixed;
+    top: 4.25rem;
+    left: 0;
+    width: 83vw;
+    height: 92vh;
+    z-index: 999999;
+    background-color: #000;
+    opacity: 0.9;
+    transition: width 0.5s linear;
+}
+
+/* Sidebar: User Info ******/
+.sidebar__userinfo {
+    padding: 1rem;
+}
+
+    .sidebar__userinfo hr {
+        height: 1px;
+        background-color: #fff;
+    }
+
+.sidebar__userinfo__photo {
+    width: 75px;
+    height: 75px;
+    border-radius: 100%;
+    border: 3px solid #fff;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+    .sidebar__userinfo__photo img {
+        position: relative;
+        z-index: -1;
+        width: 100%;
+        height: auto;
+        align-self: center;
+    }
+
+.sidebar__userinfo__name h5 {
+    font-size: 1.2rem;
+}
+
+.sidebar__userinfo__name small {
+    font-size: 1rem;
+}
+
+.sidebar__userinfo__links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+    .sidebar__userinfo__links ul li {
+        margin: 1rem 0;
+        padding: 0 1rem;
+        color:#fff;
+    }
+
+        .sidebar__userinfo__links ul li:hover a {
+            padding-left: 1rem;
+            transition: all 0.2s linear;
+        }
+
+        .sidebar__userinfo__links ul li:hover {
+            /* border-left: 2px solid #fff; */
+            background-color: rgba(255, 255, 255, 0.263);
+            transition: all 0.2s linear;
+        }
+
+        .sidebar__userinfo__links ul li a {
+            text-decoration: none;
+            font-size: 1.4rem;
+            margin-left: 0.8rem;
+        }
+
+        .sidebar__userinfo__links ul li a,
+        .sidebar__userinfo__links ul li i {
+            color: #fff;
+        }
+
+@media only screen and (min-width: 600px) {
+    .sidebar {
+        width: 50vw;
+    }
+
+    .sidebar__userinfo__name h5 {
+        font-size: 1.5rem;
+    }
+
+    .sidebar__userinfo__name small {
+        font-size: 1.4rem;
+    }
+
+    .sidebar__userinfo__links ul li a {
+        font-size: 1.4rem;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .sidebar {
+        width: 50vw;
+    }
+
+    .sidebar__userinfo__name h5 {
+        font-size: 1.5rem;
+    }
+
+    .sidebar__userinfo__name small {
+        font-size: 1.4rem;
+    }
+
+    .sidebar__userinfo__links ul li a {
+        font-size: 1.4rem;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .sidebar {
+        width: 40vw;
+    }
+
+
+    .sidebar__userinfo__name h5 {
+        font-size: 1.5rem;
+    }
+
+    .sidebar__userinfo__name small {
+        font-size: 1.4rem;
+    }
+
+    .sidebar__userinfo__links ul li a {
+        font-size: 1.4rem;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .sidebar {
+        width: 30vw;
+    }
+
+
+
+    .sidebar__userinfo__name h5 {
+        font-size: 1.5rem;
+    }
+
+    .sidebar__userinfo__name small {
+        font-size: 1.4rem;
+    }
+
+    .sidebar__userinfo__links ul li a {
+        font-size: 1.4rem;
+    }
+}
+
+/* Extending BS
+*=======================================================*/
+.my-5r {
+    margin: 5rem 0 !important;
+}
+
+/* Importing Css Media Queries into Javascript
+*========================================================*/
+/**
+ * @section Breakpoints
+ * These values will not show up in content, but can be queried by JavaScript to know which breakpoint is active. Add or remove as many breakpoints as you like.
+ */
+
+body:before {
+    content: "xsmall";
+    display: none;
+    visibility: hidden;
+}
+
+@media only screen and (min-width: 600px) {
+    body:before {
+        content: "small";
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    body:before {
+        content: "medium";
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    body:before {
+        content: "large";
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    body:before {
+        content: "xlarge";
+    }
+}

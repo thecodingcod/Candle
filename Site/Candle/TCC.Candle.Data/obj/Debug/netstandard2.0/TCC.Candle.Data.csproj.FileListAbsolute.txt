@@ -7,3 +7,11 @@ D:\Work\Projects\Candle\Site\Candle\TCC.Candle.Data\obj\Debug\netstandard2.0\TCC
 D:\Work\Projects\Candle\Site\Candle\TCC.Candle.Data\bin\Debug\netstandard2.0\TCC.Candle.Data.pdb
 D:\Work\Projects\Candle\Site\Candle\TCC.Candle.Data\obj\Debug\netstandard2.0\TCC.Candle.Data.dll
 D:\Work\Projects\Candle\Site\Candle\TCC.Candle.Data\obj\Debug\netstandard2.0\TCC.Candle.Data.pdb
+C:\Users\moham\Desktop\Candle\Site\Candle\TCC.Candle.Data\bin\Debug\netstandard2.0\TCC.Candle.Data.deps.json
+C:\Users\moham\Desktop\Candle\Site\Candle\TCC.Candle.Data\bin\Debug\netstandard2.0\TCC.Candle.Data.dll
+C:\Users\moham\Desktop\Candle\Site\Candle\TCC.Candle.Data\bin\Debug\netstandard2.0\TCC.Candle.Data.pdb
+C:\Users\moham\Desktop\Candle\Site\Candle\TCC.Candle.Data\obj\Debug\netstandard2.0\TCC.Candle.Data.csproj.CoreCompileInputs.cache
+C:\Users\moham\Desktop\Candle\Site\Candle\TCC.Candle.Data\obj\Debug\netstandard2.0\TCC.Candle.Data.AssemblyInfoInputs.cache
+C:\Users\moham\Desktop\Candle\Site\Candle\TCC.Candle.Data\obj\Debug\netstandard2.0\TCC.Candle.Data.AssemblyInfo.cs
+C:\Users\moham\Desktop\Candle\Site\Candle\TCC.Candle.Data\obj\Debug\netstandard2.0\TCC.Candle.Data.dll
+C:\Users\moham\Desktop\Candle\Site\Candle\TCC.Candle.Data\obj\Debug\netstandard2.0\TCC.Candle.Data.pdb

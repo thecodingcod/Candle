@@ -36,6 +36,8 @@ namespace TCC.Candle.Data.Migrations
 
                     b.Property<string>("ImgUrl");
 
+                    b.Property<bool>("IsDeleted");
+
                     b.Property<DateTime>("Modified")
                         .ValueGeneratedOnAdd()
                         .HasDefaultValueSql("getdate()");
@@ -62,6 +64,8 @@ namespace TCC.Candle.Data.Migrations
                     b.Property<string>("ISBN13");
 
                     b.Property<string>("ImgUrl");
+
+                    b.Property<bool>("IsDeleted");
 
                     b.Property<DateTime>("Modified")
                         .ValueGeneratedOnAdd()
@@ -103,6 +107,8 @@ namespace TCC.Candle.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasDefaultValueSql("getdate()");
 
+                    b.Property<bool>("IsDeleted");
+
                     b.Property<DateTime>("Modified")
                         .ValueGeneratedOnAdd()
                         .HasDefaultValueSql("getdate()");
@@ -128,6 +134,10 @@ namespace TCC.Candle.Data.Migrations
                         .HasDefaultValueSql("getdate()");
 
                     b.Property<string>("Description");
+
+                    b.Property<string>("ImageUrl");
+
+                    b.Property<bool>("IsDeleted");
 
                     b.Property<DateTime>("Modified")
                         .ValueGeneratedOnAdd()
@@ -155,6 +165,8 @@ namespace TCC.Candle.Data.Migrations
 
                     b.Property<DateTime>("EndDate");
 
+                    b.Property<bool>("IsDeleted");
+
                     b.Property<DateTime>("Modified");
 
                     b.Property<int>("Rate");
@@ -181,6 +193,8 @@ namespace TCC.Candle.Data.Migrations
 
                     b.Property<string>("Description");
 
+                    b.Property<bool>("IsDeleted");
+
                     b.Property<Guid>("LibraryId");
 
                     b.Property<DateTime>("Modified")
@@ -205,6 +219,8 @@ namespace TCC.Candle.Data.Migrations
 
                     b.Property<DateTime>("Created");
 
+                    b.Property<bool>("IsDeleted");
+
                     b.Property<Guid>("LibraryId");
 
                     b.Property<DateTime>("Modified");
@@ -228,6 +244,8 @@ namespace TCC.Candle.Data.Migrations
                     b.Property<DateTime>("Created")
                         .ValueGeneratedOnAdd()
                         .HasDefaultValueSql("getdate()");
+
+                    b.Property<bool>("IsDeleted");
 
                     b.Property<DateTime>("Modified")
                         .ValueGeneratedOnAdd()
@@ -256,6 +274,8 @@ namespace TCC.Candle.Data.Migrations
                         .HasDefaultValueSql("getdate()");
 
                     b.Property<string>("Description");
+
+                    b.Property<bool>("IsDeleted");
 
                     b.Property<DateTime>("Modified")
                         .ValueGeneratedOnAdd()
