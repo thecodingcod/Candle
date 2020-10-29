@@ -1,0 +1,94 @@
+﻿@model TCC.Candle.Web.ViewModels.Shelf.IndexViewModel
+@{
+    ViewBag.Title = Model.Title;
+
+}
+
+<section class="container">
+    <!-- Controls -->
+    <div class="row">
+        <div class="col-12">
+            <div class="d-flex justify-content-between align-items-center flex-wrap-reverse page__controls">
+                <h1 class="text-dark">
+                    @Model.Title
+                    <span class="badge badge-info">@Model.BooksCount</span>
+                </h1>
+                <fdiv class="page__controls--buttons">
+                    <a class="ml-4 text-warning" href="#" title="Edit Books on this shelf">
+                        <i class="fas fa-2x fa-pen-square"></i>
+                    </a>
+                    <a asp-route-shelfId="@Model.Id" asp-controller="Book" asp-action="Create" class="ml-4 text-dark" title="Add new Book">
+                        <i class="fas fa-2x fa-plus-circle"></i>
+                    </a>
+                </fdiv>
+            </div>
+        </div>
+        <div class="col-12">
+            <p>
+                @Model.Description
+            </p>
+            <hr />
+        </div>
+    </div>
+    <!-- End of Controls -->
+    <!-- Book List -->
+    <div class="row">
+        @if (@Model.BooksCount > 0)
+        {
+            @foreach (var book in Model.Books)
+            {
+                <!-- Book Card -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card shadow-sm book-card">
+                        <div class="card-header">
+                            <a asp-controller="Book" asp-action="Index" asp-route-Id="@book.Id">
+                                <h5>
+                                    @book.Title
+                                </h5>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <img src="/static/images/library.jpg" />
+                        </div>
+                        <div class="card-footer">
+
+                            <!-- TODO : Render a list of tags here  -->
+
+                            <ul class="tag_list">
+                                <li>
+                                    <a href="#"> tag 1 </a>
+                                </li>
+                                <li>
+                                    <a href="#"> tag 1 </a>
+                                </li>
+                                <li>
+                                    <a href="#"> tag 1 </a>
+                                </li>
+                                <li>
+                                    <a href="#"> tag 1 </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of Book Card -->
+            }
+        }
+        else
+        {
+            <!-- Notice -->
+            <div class="col-12">
+                <div class="alert alert-info m-0 text-center" role="alert">
+                    You didn't add any books yet !
+                </div>
+            </div>
+        }
+
+    </div>
+</section>
+
+
+
+@section styles{
+    <link rel="stylesheet" href="/static/styles/pages/shelf.css" />
+}

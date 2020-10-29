@@ -22,7 +22,7 @@
 
 
 
-                    <a asp-action="create" class="ml-4 text-dark" title="AddLibrary new library">
+                    <a asp-controller="Library" asp-action="Create" class="ml-4 text-dark" title="AddLibrary new library">
                         <i class="fas fa-2x fa-plus-circle"></i>
                     </a>
                 </div>
@@ -35,14 +35,14 @@
 
     <div id="main__content" class="row">
         <aside class="col-12  col-md-3">
-            <h5 class="lib__recent">Recent Libraries</h5>
-            <ul class="lib__recent__list">
-                <li>
-                    <a href="#">
-                        Library 1
-                    </a>
-                </li>
-            </ul>
+            @*<h5 class="lib__recent">Recent Libraries</h5>
+                <ul class="lib__recent__list">
+                    <li>
+                        <a href="#">
+                            Library 1
+                        </a>
+                    </li>
+                </ul>*@
         </aside>
 
 
@@ -67,16 +67,23 @@
                                             </span>
                                             <span class="badge badge-pill  bg-transparent text-light" title="Books">
                                                 <i class="fas fa-2x fa-book-medical"></i> &nbsp;
-                                                @lib.ShelvesCount
+                                                @lib.BooksCount
                                             </span>
                                         </div>
                                         <div>
-                                            <a asp-action="Edit" asp-route-Id="@lib.Id" class="mx-2  my-1 text-warning">
+                                            <a asp-action="Edit" asp-controller="Library" asp-route-Id="@lib.Id" class="mx-2  my-1 text-warning">
                                                 <i class="fas fa-2x fa-pen-square"></i>
                                             </a>
-                                            <a asp-action="Delete" asp-route-Id="@lib.Id" class="mx-2 my-1 text-danger">
-                                                <i class="far fa-2x fa-trash-alt"></i>
+                                            @*<a asp-action="Delete" asp-route-Id="@lib.Id" class="mx-2 my-1 text-danger">
+                                                    <i class="far fa-2x fa-trash-alt"></i>
+                                                </a>*@
+
+
+                                            <a asp-action="Index" asp-controller="Library" asp-route-Id="@lib.Id" class="mx-2 my-1 text-light">
+                                                <i class="fas fa-2x fa-chevron-right"></i>
                                             </a>
+
+
                                         </div>
                                     </div>
                                 </div>

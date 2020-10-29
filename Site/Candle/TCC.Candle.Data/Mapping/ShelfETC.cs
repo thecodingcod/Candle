@@ -10,9 +10,7 @@ namespace TCC.Candle.Data.Mapping
             base.Configure(builder);
             builder.HasKey(s => s.Id);
             builder.Property(s => s.Title).IsRequired().HasMaxLength(255);
-
             builder.HasMany(s => s.Books).WithOne(b => b.Shelf).HasPrincipalKey(s => s.Id).HasForeignKey(x => x.ShelfId);
-            builder.HasMany(s => s.Volumes).WithOne(b => b.Shelf).HasPrincipalKey(s => s.Id).HasForeignKey(x => x.ShelfId);
         }
     }
 }

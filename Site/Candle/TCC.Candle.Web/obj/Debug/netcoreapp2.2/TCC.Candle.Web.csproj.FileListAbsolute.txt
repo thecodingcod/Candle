@@ -54,9 +54,7 @@ C:\Users\moham\Desktop\Candle\Site\Candle\TCC.Candle.Web\obj\Debug\netcoreapp2.2
 C:\Users\moham\Desktop\Candle\Site\Candle\TCC.Candle.Web\obj\Debug\netcoreapp2.2\TCC.Candle.Web.RazorCoreGenerate.cache
 C:\Users\moham\Desktop\Candle\Site\Candle\TCC.Candle.Web\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index.g.cshtml.cs
 C:\Users\moham\Desktop\Candle\Site\Candle\TCC.Candle.Web\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Layout\_header.g.cshtml.cs
-C:\Users\moham\Desktop\Candle\Site\Candle\TCC.Candle.Web\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Layout\_scripts.g.cshtml.cs
 C:\Users\moham\Desktop\Candle\Site\Candle\TCC.Candle.Web\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Layout\_Sidebar.g.cshtml.cs
-C:\Users\moham\Desktop\Candle\Site\Candle\TCC.Candle.Web\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Layout\_Styles.g.cshtml.cs
 C:\Users\moham\Desktop\Candle\Site\Candle\TCC.Candle.Web\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Layout.g.cshtml.cs
 C:\Users\moham\Desktop\Candle\Site\Candle\TCC.Candle.Web\obj\Debug\netcoreapp2.2\Razor\Views\_ViewImports.g.cshtml.cs
 C:\Users\moham\Desktop\Candle\Site\Candle\TCC.Candle.Web\obj\Debug\netcoreapp2.2\Razor\Views\_ViewStart.g.cshtml.cs
@@ -66,5 +64,12 @@ C:\Users\moham\Desktop\Candle\Site\Candle\TCC.Candle.Web\obj\Debug\netcoreapp2.2
 C:\Users\moham\Desktop\Candle\Site\Candle\TCC.Candle.Web\obj\Debug\netcoreapp2.2\TCC.Candle.Web.csproj.CopyComplete
 C:\Users\moham\Desktop\Candle\Site\Candle\TCC.Candle.Web\obj\Debug\netcoreapp2.2\TCC.Candle.Web.dll
 C:\Users\moham\Desktop\Candle\Site\Candle\TCC.Candle.Web\obj\Debug\netcoreapp2.2\TCC.Candle.Web.pdb
-C:\Users\moham\Desktop\Candle\Site\Candle\TCC.Candle.Web\obj\Debug\netcoreapp2.2\Razor\Views\Home\CreateForm.g.cshtml.cs
-C:\Users\moham\Desktop\Candle\Site\Candle\TCC.Candle.Web\obj\Debug\netcoreapp2.2\Razor\Views\Home\EditForm.g.cshtml.cs
+C:\Users\moham\Desktop\Candle\Site\Candle\TCC.Candle.Web\obj\Debug\netcoreapp2.2\Razor\Views\Library\Index.g.cshtml.cs
+C:\Users\moham\Desktop\Candle\Site\Candle\TCC.Candle.Web\obj\Debug\netcoreapp2.2\Razor\Views\Shelf\Index.g.cshtml.cs
+C:\Users\moham\Desktop\Candle\Site\Candle\TCC.Candle.Web\obj\Debug\netcoreapp2.2\Razor\Views\Shelf\CreateForm.g.cshtml.cs
+C:\Users\moham\Desktop\Candle\Site\Candle\TCC.Candle.Web\obj\Debug\netcoreapp2.2\Razor\Views\Shelf\EditForm.g.cshtml.cs
+C:\Users\moham\Desktop\Candle\Site\Candle\TCC.Candle.Web\obj\Debug\netcoreapp2.2\Razor\Views\Library\CreateForm.g.cshtml.cs
+C:\Users\moham\Desktop\Candle\Site\Candle\TCC.Candle.Web\obj\Debug\netcoreapp2.2\Razor\Views\Library\EditForm.g.cshtml.cs
+C:\Users\moham\Desktop\Candle\Site\Candle\TCC.Candle.Web\obj\Debug\netcoreapp2.2\Razor\Views\Book\CreateForm.g.cshtml.cs
+C:\Users\moham\Desktop\Candle\Site\Candle\TCC.Candle.Web\obj\Debug\netcoreapp2.2\Razor\Views\Book\EditForm.g.cshtml.cs
+C:\Users\moham\Desktop\Candle\Site\Candle\TCC.Candle.Web\obj\Debug\netcoreapp2.2\Razor\Views\Book\Index.g.cshtml.cs

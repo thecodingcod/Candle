@@ -19,41 +19,12 @@ namespace TCC.Candle.Data.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("TCC.Candle.Data.Entities.Author", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("Biography");
-
-                    b.Property<DateTime>("Created")
-                        .ValueGeneratedOnAdd()
-                        .HasDefaultValueSql("getdate()");
-
-                    b.Property<DateTime?>("DateOfBirth");
-
-                    b.Property<DateTime?>("DateOfDeath");
-
-                    b.Property<string>("ImgUrl");
-
-                    b.Property<bool>("IsDeleted");
-
-                    b.Property<DateTime>("Modified")
-                        .ValueGeneratedOnAdd()
-                        .HasDefaultValueSql("getdate()");
-
-                    b.Property<string>("Name")
-                        .IsRequired();
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Authors");
-                });
-
             modelBuilder.Entity("TCC.Candle.Data.Entities.Book", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Author");
 
                     b.Property<DateTime>("Created")
                         .ValueGeneratedOnAdd()
@@ -81,47 +52,13 @@ namespace TCC.Candle.Data.Migrations
 
                     b.Property<string>("Title");
 
-                    b.Property<Guid?>("VolumeId");
-
                     b.Property<int>("language");
 
                     b.HasKey("Id");
 
                     b.HasIndex("ShelfId");
 
-                    b.HasIndex("VolumeId");
-
                     b.ToTable("Books");
-                });
-
-            modelBuilder.Entity("TCC.Candle.Data.Entities.BookAuthor", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<Guid>("AuthorId");
-
-                    b.Property<Guid>("BookId");
-
-                    b.Property<DateTime>("Created")
-                        .ValueGeneratedOnAdd()
-                        .HasDefaultValueSql("getdate()");
-
-                    b.Property<bool>("IsDeleted");
-
-                    b.Property<DateTime>("Modified")
-                        .ValueGeneratedOnAdd()
-                        .HasDefaultValueSql("getdate()");
-
-                    b.Property<int>("Order");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("AuthorId");
-
-                    b.HasIndex("BookId");
-
-                    b.ToTable("BookAuthors");
                 });
 
             modelBuilder.Entity("TCC.Candle.Data.Entities.Library", b =>
@@ -264,58 +201,11 @@ namespace TCC.Candle.Data.Migrations
                     b.ToTable("TaggedBooks");
                 });
 
-            modelBuilder.Entity("TCC.Candle.Data.Entities.Volume", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<DateTime>("Created")
-                        .ValueGeneratedOnAdd()
-                        .HasDefaultValueSql("getdate()");
-
-                    b.Property<string>("Description");
-
-                    b.Property<bool>("IsDeleted");
-
-                    b.Property<DateTime>("Modified")
-                        .ValueGeneratedOnAdd()
-                        .HasDefaultValueSql("getdate()");
-
-                    b.Property<Guid>("ShelfId");
-
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasMaxLength(255);
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ShelfId");
-
-                    b.ToTable("Volumes");
-                });
-
             modelBuilder.Entity("TCC.Candle.Data.Entities.Book", b =>
                 {
                     b.HasOne("TCC.Candle.Data.Entities.Shelf", "Shelf")
                         .WithMany("Books")
                         .HasForeignKey("ShelfId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("TCC.Candle.Data.Entities.Volume", "Volume")
-                        .WithMany("Books")
-                        .HasForeignKey("VolumeId");
-                });
-
-            modelBuilder.Entity("TCC.Candle.Data.Entities.BookAuthor", b =>
-                {
-                    b.HasOne("TCC.Candle.Data.Entities.Author", "Author")
-                        .WithMany("Books")
-                        .HasForeignKey("AuthorId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("TCC.Candle.Data.Entities.Book", "Book")
-                        .WithMany("Authors")
-                        .HasForeignKey("BookId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
@@ -352,14 +242,6 @@ namespace TCC.Candle.Data.Migrations
                     b.HasOne("TCC.Candle.Data.Entities.Tag", "Tag")
                         .WithMany("Books")
                         .HasForeignKey("TagId");
-                });
-
-            modelBuilder.Entity("TCC.Candle.Data.Entities.Volume", b =>
-                {
-                    b.HasOne("TCC.Candle.Data.Entities.Shelf", "Shelf")
-                        .WithMany("Volumes")
-                        .HasForeignKey("ShelfId")
-                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }

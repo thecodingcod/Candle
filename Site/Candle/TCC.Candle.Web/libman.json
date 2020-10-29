@@ -2,7 +2,6 @@
   "version": "1.0",
   "defaultProvider": "cdnjs",
   "libraries": [
-
     {
       "provider": "cdnjs",
       "library": "twitter-bootstrap@4.5.3",
@@ -44,15 +43,23 @@
       "provider": "cdnjs",
       "library": "jquery-validation-unobtrusive@3.2.11",
       "destination": "wwwroot/static/vendors/jquery-validation-unobtrusive/"
+    },
+    {
+      "provider": "cdnjs",
+      "library": "jquery-validate@1.19.2",
+      "destination": "wwwroot/static/vendors/jquery-validate/",
+      "files": [
+        "jquery.validate.min.js"
+      ]
+    },
+    {
+      "library": "OwlCarousel2@2.3.4",
+      "destination": "wwwroot/static/vendors/OwlCarousel2/",
+      "files": [
+        "owl.carousel.min.js",
+        "assets/owl.theme.default.min.css",
+        "assets/owl.carousel.min.css"
+      ]
     }
-  ,
-{
-  "provider": "cdnjs",
-  "library": "jquery-validate@1.19.2",
-  "destination": "wwwroot/static/vendors/jquery-validate/",
-  "files": [
-    "jquery.validate.min.js"
   ]
-}
-]
 }

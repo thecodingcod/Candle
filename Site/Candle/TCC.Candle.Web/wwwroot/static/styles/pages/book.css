@@ -1,67 +1,136 @@
 /* Book Custom Css
 *=======================================================>*/
+
 .book {
-  width: 100%;
+    width: 100%;
 }
 
-.book__info__ISBN13 {
-}
+.book__info__ISBN13 {}
 
 .book__cover {
-  width: 100%;
-  height: auto;
+    width: 100%;
+    height: auto;
 }
 
 .book__metadata {
-  line-height: 0rem;
+    line-height: 0rem;
 }
+
 .book__metadata p {
-  font-size: 0.7rem;
+    font-size: 0.7rem;
 }
 
 .book__description {
+    text-align: justify;
 }
 
-.book__rate hr{
+.book__rate hr {
     text-align: left;
     max-width: 25%;
-    margin:1rem 0;
+    margin: 1rem 0;
 }
 
-.book__volume__books{
+.book__volume__books {
     list-style-type: none;
 }
 
-.li-connect{
-    margin-left:11px;
-    border-left: 2px solid #333;
-    height:0.8rem;
+
+/* Book: Tags
+=========================================>*/
+
+.book__tags {
+    border-top: 1px dashed rgb(51, 51, 51);
+    padding-top: 1rem;
 }
 
-.li-data{
+.book__tags>.tag_list {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.book__tags>.tag_list li {
+    background-color: #e9d08e;
+    border-radius: 1rem;
+    padding: 0.1rem 0.3rem;
+    margin: 0.1rem;
+}
+
+.book__tags>.tag_list li:hover {
+    -webkit-box-shadow: 7px 9px 8px -9px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 7px 9px 8px -9px rgba(0, 0, 0, 0.75);
+    box-shadow: 7px 9px 8px -9px rgba(0, 0, 0, 0.75);
+}
+
+.book__tags>.tag_list li a {
+    text-decoration: none;
+    color: #701f07;
+}
+
+.book__tags>.tag_list li a:before {
+    content: "#";
+}
+
+
+/* Book: Authors
+=========================================>*/
+
+.book__authors {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+}
+
+.book__authors>ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
     display: flex;
     justify-content: start;
     align-items: center;
-}
-.li-data a{}
-
-.li-data__circle{
-    display: inline-block;
-    min-width: 1.5rem;
-    max-width: 1.5rem;
-    width: 1.5rem;
-    height: 1.5rem;
-    border: 1px solid #333;
-    border-radius: 50%;
-    margin-right:1rem;
+    flex-wrap: wrap;
 }
 
+.book__authors>ul>li {
+    margin-left: 0.5rem;
+}
 
-.book__review{
+.book__authors>ul>li:after {
+    content: ', ';
+}
+
+.book__authors>ul>li:last-child:after {
+    content: '';
+}
+
+
+/* Book: Review
+=========================================>*/
+
+.book__review {
     border-radius: 0;
 }
 
+.book__review .card-body {
+    padding: 0.5rem;
+}
+
+
+/* Book Relations 
+=============================================>*/
+
+.book__relations {}
+
+.book__relations a:last-child {
+    margin-left: 2rem;
+}
+
+
 /* Book: Small Screens
 =========================================>*/
-@media only screen and (min-width: 600px) {
-}
+
+@media only screen and (min-width: 600px) {}

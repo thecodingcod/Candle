@@ -15,17 +15,14 @@ namespace TCC.Candle.Data.Entities
         public DateTime Released { get; set; }
         public Languages language { get; set; }
         public string ImgUrl { get; set; }
-
+        public string Author { get; set; }
 
         // Navigational Properties
         public Guid ShelfId { get; set; }
         public Shelf Shelf { get; set; }
 
-        public Guid? VolumeId { get; set; }
-        public Volume Volume { get; set; }
 
         public virtual ICollection<Review> Reviews { get; set; }
         public virtual ICollection<TaggedBook> Tags { get; set; }
-        public virtual ICollection<BookAuthor> Authors { get; set; }
     }
 }

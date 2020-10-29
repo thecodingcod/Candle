@@ -13,7 +13,7 @@ namespace TCC.Candle.Data.Repositories
 
     public class Repository<T> : IRepository<T> where T : BaseEntity
     {
-        private CandleContext context;
+        protected CandleContext context;
         public Repository(IDesignTimeDbContextFactory<CandleContext> contextfactory)
         {
             context = contextfactory.CreateDbContext(null);
@@ -64,19 +64,13 @@ namespace TCC.Candle.Data.Repositories
         }
 
 
-        public bool Update(Guid Id, T item)
+        public bool Update(Guid id, T item)
         {
-            var current = context.Set<T>().AsNoTracking().SingleOrDefault(i => i.Id == Id);
-            if (current != null)
-            {
-                context.Set<T>().Update(item);
-                int occurences = context.SaveChanges();
-                if (occurences > 0)
-                {
-                    return true;
-                }
-            }
-            return false;
+            var current = context.Set<T>().AsNoTracking().SingleOrDefault(i => i.Id == id);
+            if (current == null) return false;
+            context.Set<T>().Update(item);
+            var occurrences = context.SaveChanges();
+            return occurrences > 0;
         }
 
         public T GetById(Guid Id)

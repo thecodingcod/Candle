@@ -15,3 +15,4 @@ C:\Users\moham\Desktop\Candle\Site\Candle\TCC.Candle.Data\obj\Debug\netstandard2
 C:\Users\moham\Desktop\Candle\Site\Candle\TCC.Candle.Data\obj\Debug\netstandard2.0\TCC.Candle.Data.AssemblyInfo.cs
 C:\Users\moham\Desktop\Candle\Site\Candle\TCC.Candle.Data\obj\Debug\netstandard2.0\TCC.Candle.Data.dll
 C:\Users\moham\Desktop\Candle\Site\Candle\TCC.Candle.Data\obj\Debug\netstandard2.0\TCC.Candle.Data.pdb
+C:\Users\moham\Desktop\Candle\Site\Candle\TCC.Candle.Data\obj\Debug\netstandard2.0\TCC.Candle.Data.csprojAssemblyReference.cache

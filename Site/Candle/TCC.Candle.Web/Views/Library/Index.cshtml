@@ -1,0 +1,121 @@
+﻿@model TCC.Candle.Web.ViewModels.Library.IndexViewModel
+@{
+    ViewBag.Title = Model.Title;
+}
+
+<section class="container">
+    <!-- Controls -->
+    <div class="row">
+        <div class="col-12">
+            <div class="d-flex justify-content-between align-items-center flex-wrap-reverse page__controls">
+                <h1 class="text-dark">
+                    @Model.Title
+                    <span class="badge badge-dark">@Model.ShelvesCount</span>
+                </h1>
+                <div class="page__controls--buttons">
+                    <a class="ml-4 text-warning" href="#" title="Edit Libraries">
+                        <i class="fas fa-2x fa-pen-square"></i>
+                    </a>
+                    <a class="ml-4 text-dark" asp-route-libraryId="@Model.Id" asp-action="Create" asp-controller="Shelf" title="Add new library">
+                        <i class="fas fa-2x fa-plus-circle"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <p>
+                @Model.Description
+            </p>
+            <hr />
+        </div>
+    </div>
+    <!-- End of Controls -->
+
+    <div id="">
+        <div class="row">
+
+
+            @if (Model.Shelves?.Count() > 0)
+            {
+
+
+                @foreach (var shelf in Model.Shelves)
+                {
+                    <!-- shelf Card -->
+                    <div class="card shelf-card">
+                        <div class="card-header">
+                            <div class="d-flex justify-content-between">
+                                <h4>
+                                    @shelf.Title
+                                    <span class="badge badge-pill badge-info">@shelf.BooksCount</span>
+                                </h4>
+                                <div class="controls">
+                                    <!-- Edit Shelf -->
+                                    <a asp-controller="Shelf" asp-action="Edit" asp-route-shelfId="@shelf.Id" asp-route-libraryId="@Model.Id" class="mx-2 my-1 text-info">
+                                        <i class="fas fa-2x fa-pen-square"></i>
+                                    </a>
+
+                                    <!-- Open Shelf -->
+                                    <a asp-controller="Shelf" asp-action="Index" asp-route-Id="@shelf.Id" class="mx-2 my-1 text-info">
+                                        <i class="fas fa-chevron-right fa-2x"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body shadow-sm">
+                            @if (shelf.Books?.Count() > 0)
+                            {
+                                <div class="owl-carousel owl-theme">
+                                    @foreach (var book in shelf.Books)
+                                    {
+                                        <!-- Book -->
+                                        <div class="book-slide">
+                                            <img class="book-cover" src="/static/images/hero.png" />
+                                            <div class="book-title">
+                                                <h5>@book.Title</h5>
+                                                <p class="p-0 m-0 text-info">Last modified: @book.LastModified.ToShortDateString()</p>
+                                            </div>
+                                        </div>
+                                        <!-- End of Book -->
+                                    }
+                                </div>
+
+                            }
+                            else
+                            {
+                                <!-- Book -->
+                                <div class="book-slide w-100 m-0">
+                                    <div class="alert alert-info m-0 text-center" role="alert">
+                                        You didn't add any books yet !
+                                    </div>
+                                </div>
+                                <!-- End of Book -->
+                            }
+                        </div>
+                    </div>
+                    <!-- End of shelf Card -->
+                }
+
+            }
+            else
+            {
+                <div class="card shelf-card">
+                    <div class="card-body shadow-sm">
+                        <div class="alert alert-info m-0 text-center" role="alert">
+                            You didn't add any shelves yet !
+                        </div>
+                    </div>
+                </div>
+                <!-- End of shelf Card -->
+            }
+        </div>
+    </div>
+</section>
+
+
+
+@section styles{
+    <link rel="stylesheet" href="/static/vendors/OwlCarousel2/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="/static/vendors/OwlCarousel2/assets/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="/static/styles/pages/library.css" />
+}

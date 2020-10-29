@@ -16,17 +16,25 @@ namespace TCC.Candle.Logic.Services.Concrete
         }
 
 
-        public LibraryFormDto GetById(Guid id)
+        public LibraryFormDto GetLibraryById(Guid id)
         {
             var item = repo.GetById(id);
             if (item == null) return null;
             return new LibraryFormDto()
             {
+                Id = item.Id,
                 Title = item.Title,
                 Description = item.Description,
                 ImageUrl = item.ImageUrl
             };
         }
+
+        public string GetLibraryDescription(Guid id)
+        {
+            var lib = repo.GetById(id);
+            return lib?.Description;
+        }
+
         public IEnumerable<Library> GetAllLibraries()
         {
             return repo.GetAll();
@@ -64,12 +72,13 @@ namespace TCC.Candle.Logic.Services.Concrete
             };
             return repo.Add(lib);
         }
-        public bool EditLibrary(Guid Id, LibraryFormDto libraryFormDto)
+
+        public bool EditLibrary(LibraryFormDto libraryFormDto)
         {
             if (libraryFormDto == null) return false;
-            var result = repo.Update(Id, new Library()
+            var result = repo.Update(libraryFormDto.Id, new Library()
             {
-                Id = Id,
+                Id = libraryFormDto.Id,
                 Title = libraryFormDto.Title,
                 Description = libraryFormDto.Description,
                 Modified = DateTime.Now
@@ -81,7 +90,5 @@ namespace TCC.Candle.Logic.Services.Concrete
         {
             return repo.Remove(Id);
         }
-
-
     }
 }

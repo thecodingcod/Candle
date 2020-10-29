@@ -15,33 +15,25 @@ namespace TCC.Candle.Logic.Services.Abstract
         int GetLibrariesCount();
 
         /// <summary>
-        /// Return the count of shelves in a library
-        /// </summary>
-        /// <param name="Id"></param>
-        /// <returns></returns>
-        int GetLibraryShelvesCount(Guid Id);
-
-        /// <summary>
-        /// Return the count of books in a Library
-        /// </summary>
-        /// <param name="Id"> Library Id</param>
-        /// <returns></returns>
-        int GetLibraryBooksCount(Guid Id);
-
-        /// <summary>
         /// Get All Libraries
         /// </summary>
         /// <returns></returns>
         IEnumerable<Library> GetAllLibraries();
 
+        LibraryFormDto GetLibraryById(Guid id);
+        string GetLibraryDescription(Guid id);
+
 
         bool AddLibrary(LibraryFormDto libraryFormDto);
 
-        LibraryFormDto GetById(Guid id);
 
 
-        bool EditLibrary(Guid Id, LibraryFormDto libraryFormDto);
+        bool EditLibrary(LibraryFormDto libraryFormDto);
 
-        bool DeleteLibrary(Guid Id);
+        bool DeleteLibrary(Guid id);
+
+
+
     }
 }
+

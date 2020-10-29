@@ -6,8 +6,19 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <partial name="./Layout/_styles" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/static/vendors/twitter-bootstrap/css/bootstrap.min.css">
 
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="~/static/vendors/font-awesome/css/all.min.css">
+
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="~/static/vendors/animate.css/animate.min.css" />
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="~/static/styles/shared.css">
+
+    @RenderSection("styles", false)
     <!-- Enable Fontawesome Psuedo elements -->
     <script>
         window.FontAwesomeConfig = {
@@ -15,7 +26,7 @@
         }
     </script>
 
-    @RenderSection("styles", false)
+
     <title>Candle - @ViewBag.Title</title>
 </head>
 
@@ -33,12 +44,17 @@
     </section>
     <!-- End of Content -->
     <!-- Scripts -->
-    @await Html.PartialAsync("./Layout/_scripts")
-
-
-
-
-
+    <!--jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="~/static/vendors/jquery/jquery.min.js"></script>
+    <script src="~/static/vendors/twitter-bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/static/vendors/font-awesome/js/all.min.js"></script>
+    <!-- Jquery validation-->
+    <script src="static/vendors/jquery-validate/jquery.validate.min.js"></script>
+    <script src="static/vendors/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    @* OwlCarousel *@
+    <!-- Owl Carousel -->
+    <script src="/static/vendors/OwlCarousel2/owl.carousel.min.js"></script>
+    <script src="~/static/scripts/bundle.js"></script>
     @RenderSection("scripts", false)
     <!-- End of scripts-->
 </body>

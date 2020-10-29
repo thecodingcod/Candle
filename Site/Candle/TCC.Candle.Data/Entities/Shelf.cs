@@ -12,7 +12,6 @@ namespace TCC.Candle.Data.Entities
 
         // Navigational Properties
         public virtual ICollection<Book> Books { get; set; }
-        public virtual ICollection<Volume> Volumes { get; set; }
         public Guid LibraryId { get; set; }
         public Library Library { get; set; }
 

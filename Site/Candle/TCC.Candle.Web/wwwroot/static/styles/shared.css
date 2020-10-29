@@ -40,6 +40,7 @@ h6,
 
 #content {
     margin-top: 10rem;
+    margin-bottom: 10rem;
 }
 
 
@@ -51,7 +52,6 @@ h6,
 }
 
 
-/** medium Screens */
 
 
 /* Preloader
@@ -281,6 +281,13 @@ h6,
 .my-5r {
     margin: 5rem 0 !important;
 }
+
+/* Badge Colors ******/
+.badge-info{
+    background-color: #F2F2F2;
+    color: #653527;
+}
+
 
 /* Importing Css Media Queries into Javascript
 *========================================================*/

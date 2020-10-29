@@ -1,0 +1,55 @@
+.shelf-card {
+  margin: 1rem;
+  padding: 0;
+  padding-bottom: 0.3rem;
+  border: 0;
+  border-radius: 0;
+  width: 100%;
+}
+
+.shelf-card .card-body {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.shelf-card .card-header{
+    background:#fff;
+    padding:0;
+    border:0;
+    margin-bottom:0.5rem;
+}
+
+.shelf-card .card-header .badge{
+  font-size:0.6em;
+  vertical-align: middle;
+}
+
+.book-slide {
+  margin: 1px;
+}
+.book-slide > .book-cover {
+}
+
+.book-slide > .book-title {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  z-index: 99;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.708);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+
+.book-slide:hover > .book-title {
+  visibility: visible;
+}
+

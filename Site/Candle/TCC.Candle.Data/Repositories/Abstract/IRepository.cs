@@ -6,12 +6,13 @@ namespace TCC.Candle.Data.Repositories.Abstract
 {
     public interface IRepository<T>
     {
-        T GetById(Guid Id);
+        T GetById(Guid id);
         T GetSingle(Expression<Func<T, bool>> predicate);
+
         bool Add(T item);
-        bool Remove(Guid Id);
-        bool RemovePhysical(Guid Id);
-        bool Update(Guid Id, T Item);
+        bool Remove(Guid id);
+        bool RemovePhysical(Guid id);
+        bool Update(Guid id, T item);
         IEnumerable<T> GetAll();
         IEnumerable<T> Where(Expression<Func<T, bool>> predicate);
 

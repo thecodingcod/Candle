@@ -9,7 +9,6 @@ namespace TCC.Candle.Data.Mapping
         {
             base.Configure(builder);
             builder.HasKey(b => b.Id);
-            builder.Property(b => b.VolumeId).IsRequired(false);
             // 1(Book)-to-m(Reviews)
             builder.HasMany(b => b.Reviews).WithOne(r => r.Book).HasForeignKey(b => b.BookId);
         }
